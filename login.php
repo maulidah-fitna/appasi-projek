@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "config.php";
+include "library/config.php";
 
 if(!defined('INDEX')) die();
 
