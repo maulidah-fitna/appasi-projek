@@ -149,3 +149,13 @@ INSERT INTO data_siswa (nisn, nama_siswa, kelas, jurusan) VALUES
 ("201/140.065",	"Yazid Basthomi", 12, "RPL"),
 ("202/141.065",	"Yusuf Geva Rowais", 12, "RPL");
 
+USE appasi;
+CREATE TABLE user(
+id_user INT(10) NOT NULL AUTO_INCREMENT,
+nama_lengkap VARCHAR(100) NOT NULL,
+username VARCHAR(50) NOT NULL,
+password VARCHAR(50) NOT NULL,
+PRIMARY KEY(id_user)
+);
+
+admin1 = 'appasi1'
