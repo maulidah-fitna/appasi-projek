@@ -1,11 +1,11 @@
 <?php
-session_start();
-include "library/config.php";
+// session_start();
+// include "library/config.php";
 
-if(!defined('INDEX')) die();
+// if(!defined('INDEX')) die();
 
 ?>
-<h1>APPASI</h1>
+<!-- <h1>APPASI</h1>
 <h2>Sign-In</h2>
 
 <form action="cek-login.php" method="post">
@@ -15,5 +15,34 @@ if(!defined('INDEX')) die();
 </form>
 
 <?php
-echo "Belum Punya Akun? <a href='buat-akun.php'>Buat Akun</a>"
-?>
+// echo "Belum Punya Akun? <a href='buat-akun.php'>Buat Akun</a>"
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login | APPASI</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="code" placeholder="Code" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="character">
+           
+        </div>
+        
+    </div>
+</body>
+</html>
