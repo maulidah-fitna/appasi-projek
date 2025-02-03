@@ -14,9 +14,7 @@
     <input type="submit" value="Sign In">
 </form>
 
-<?php
-// echo "Belum Punya Akun? <a href='buat-akun.php'>Buat Akun</a>"
-?> -->
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,10 +31,11 @@
     <div class="container">
         <div class="login-box">
             <h2>Login</h2>
-            <form action="cek-login.php" method="post">
+            <form action="ceklogin.php" method="post">
                 <input type="text" id="username" placeholder="Username" required>
                 <input type="password" id="code" placeholder="Password" required>
-                <button type="submit">Login</button>
+                <?="Belum Punya Akun? <a href='buat-akun.php'>Buat Akun</a>"?>
+                <button class="login" type="submit">Login</button>
             </form>
         </div>
         <div class="character">

@@ -5,7 +5,7 @@
     $username = $_POST['username'];
     $password = md5($_POST['password']);
 
-    $query = "SELECT * FROM user WHERE username = '$username' AND PASSWORD = '$password'";
+    $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
     
     // untuk menam
     $hasil = mysqli_query($con, $query);
@@ -24,3 +24,4 @@
         echo "<meta http-equiv='refresh' content='2, url=login.php'>";
     }
 ?>
+

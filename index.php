@@ -49,7 +49,9 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
             </ul>
         </aside>
         <section class="main">
-            <?php include "konten.php" ?>
+        <?php
+        //  include "konten.php" 
+         ?>
         </section>
     </div>
     <footer>
@@ -203,11 +205,11 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
         <!-- Sidebar -->
         <div class="sidebar">
             <h3>Menu Utama</h3>
-            <a href="#">Menu Absen</a>
-            <a href="#">Data Absen</a>
-            <a href="#">Data Rekap</a>
-            <a href="#">Pengaturan</a>
-            <a href="#">Keluar</a>
+            <a href="?hal=dashboard">Menu Absen</a>
+            <a href="?hal=menu-absen">Data Absen</a>
+            <a href="?hal=rekap">Data Rekap</a>
+            <a href="?hal=pengaturan">Pengaturan</a>
+            <a href="logout.php">Keluar</a>
         </div>
 
         <!-- Konten Utama -->
@@ -229,10 +231,14 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
                     </p>
                 </div>
             </div>
-
+            
+            <section class="main">
+                <?php include "konten.php" ?>
+            </section>
+            
             <!-- Footer -->
             <div class="footer">
-                Copyright &copy; <b>Kelompok 1</b>
+                Copyright &copy; XI RPL | <b>Kelompok 1</b>
             </div>
         </div>
     </div>
