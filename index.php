@@ -232,7 +232,7 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
 
             <!-- Footer -->
             <div class="footer">
-                © 2025 Copyright | Kelompok 1
+                Copyright &copy; <b>Kelompok 1</b>
             </div>
         </div>
     </div>

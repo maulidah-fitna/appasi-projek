@@ -33,9 +33,9 @@
     <div class="container">
         <div class="login-box">
             <h2>Login</h2>
-            <form>
+            <form action="cek-login.php" method="post">
                 <input type="text" id="username" placeholder="Username" required>
-                <input type="password" id="code" placeholder="Code" required>
+                <input type="password" id="code" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
         </div>
