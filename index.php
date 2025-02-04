@@ -206,7 +206,7 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
         <div class="sidebar">
             <h3>Menu Utama</h3>
             <a href="?hal=dashboard">Menu Absen</a>
-            <a href="?hal=menu-absen">Data Absen</a>
+            <a href="?hal=data-absen">Data Absen</a>
             <a href="?hal=rekap">Data Rekap</a>
             <a href="?hal=pengaturan">Pengaturan</a>
             <a href="logout.php">Keluar</a>

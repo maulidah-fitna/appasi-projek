@@ -3,9 +3,9 @@
     include "library/config.php";
 
     $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
 
-    $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+    $query = "SELECT * FROM user WHERE username = '$username' AND PASSWORD = '$password'";
     
     // untuk menam
     $hasil = mysqli_query($con, $query);
@@ -25,3 +25,12 @@
     }
 ?>
 
+
+
+<!-- 
+Warning: Undefined array key "username" in C:\laragon\www\appasi-projek\ceklogin.php on line 5
+
+Warning: Undefined array key "password" in C:\laragon\www\appasi-projek\ceklogin.php on line 6
+
+Deprecated: md5(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\appasi-projek\ceklogin.php on line 6
+Login Gagal! -->
