@@ -5,7 +5,7 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM user WHERE username = '$username' AND PASSWORD = '$password'";
+    $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
     
     // untuk menam
     $hasil = mysqli_query($con, $query);

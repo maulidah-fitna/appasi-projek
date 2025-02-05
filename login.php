@@ -34,7 +34,7 @@
             <form action="ceklogin.php" method="post">
                 <input type="text" id="username" placeholder="Username" required>
                 <input type="password" id="code" placeholder="Password" required>
-                <?="Belum Punya Akun? <a href='buat-akun.php'>Buat Akun</a>"?>
+                
                 <button class="login" type="submit">Login</button>
             </form>
         </div>
