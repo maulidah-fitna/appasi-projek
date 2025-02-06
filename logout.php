@@ -80,7 +80,7 @@
     <div class="main-content">
         <div class="logout-box">
             Anda berhasil keluar<br>Silahkan sign in kembali
-            <?="<meta http-equiv='refresh' content='2; url=login.php'>";?>
+            <?="<meta http-equiv='refresh' content='1; url=login.php'>";?>
         </div>
         <button class="back-button" onclick="goBack()">Kembali</button>
     </div>

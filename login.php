@@ -32,8 +32,8 @@
         <div class="login-box">
             <h2>Login</h2>
             <form action="ceklogin.php" method="post">
-                <input type="text" id="username" placeholder="Username" required>
-                <input type="password" id="code" placeholder="Password" required>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="code" name="password" placeholder="Password" required>
                 
                 <button class="login" type="submit">Login</button>
             </form>

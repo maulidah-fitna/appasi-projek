@@ -5,6 +5,12 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    if (!empty($password)) {
+        $password = md5($password); // Gunakan md5 hanya jika password tidak kosong
+    } else {
+        $password = ''; // Pastikan password tidak null
+    }
+
     $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
     
     // untuk menam

@@ -87,3 +87,15 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.error {
+    border: 2px solid red !important;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+}
