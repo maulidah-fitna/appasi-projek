@@ -1,5 +1,5 @@
 <?php
-if(!defined('INDEX')) die();
+// if(!defined('INDEX')) die();
 ?>
 
 
@@ -201,6 +201,7 @@ if(!defined('INDEX')) die();
         .sidebar ul {
             list-style: none;
             padding: 0;
+
         }
 
         .sidebar ul li {
@@ -214,6 +215,7 @@ if(!defined('INDEX')) die();
             display: flex;
             align-items: center;
             gap: 10px;
+
         }
 
         .sidebar ul li:hover {
@@ -224,6 +226,7 @@ if(!defined('INDEX')) die();
         .sidebar ul li i {
             width: 20px;
             text-align: center;
+            
         }
 
         .main {
@@ -234,7 +237,8 @@ if(!defined('INDEX')) die();
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
+            /* position: relative; */
+            padding-left: 10%;
         }
 
         .main h1 {
@@ -335,7 +339,7 @@ if(!defined('INDEX')) die();
     </div>
 
     <section class="main">
-        <?php include "konten.php" ?>
+        <?php include "../konten.php" ?>
     </section>
 
     <div class="footer">

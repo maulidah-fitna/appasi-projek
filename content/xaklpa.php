@@ -170,13 +170,25 @@ include "../library/config.php"
                             </tr>
                         </thead>
                         <tbody>
+                        <?php
+                        $query = "SELECT * FROM siswa_putra WHERE jurusan='LPS'";
+                        // $query .= "LEFT JOIN data-absen ";
+                        // $query .= "ON pegawai.id_jabatan = jabatan.id_jabatan ";
+                        // $query .= "ORDER BY pegawai.id_jabatan DESC";
+                        $result = mysqli_query($con, $query);
+                        $no = 0;
+
+                        while($data = mysqli_fetch_assoc($result)) {
+                            $no++;
+                        ?>
+
                             <tr>
-                                <td>1</td>
-                                <td>asep</td>
+                                <td><?$no;?></td>
+                                <td><?=$data['nama_siswa']?></td>
                                 <td><input type="checkbox"></td>
                                 <td><input type="checkbox"></td>
-                                <td><input type="checkbox"></td>
-                            </tr>
+                                <td><input type="checkbox"></td><br>
+                            </tr><br>
                         </tbody>
                     </table>
                 </div>
@@ -201,7 +213,7 @@ include "../library/config.php"
                                 <td><input type="checkbox" checked></td>
                                 <td><input type="checkbox" checked></td>
                                 <td><input type="checkbox" checked></td>
-                            </tr>
+                            </tr><br>
                         </tbody>
                     </table>
                 </div>
@@ -215,5 +227,10 @@ include "../library/config.php"
             document.getElementById('current-class').innerText = className;
         }
     </script>
+
+<?php
+                        }
+?>
 </body>
 </html>
+

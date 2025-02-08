@@ -2,8 +2,6 @@
 session_start();
 include "library/config.php";
 
-if(!defined('INDEX')) die();
-
 ?>
 <!-- <h1>APPASI</h1>
 <h2>Sign-In</h2>
