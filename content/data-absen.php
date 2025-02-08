@@ -1,5 +1,5 @@
 <?php
-// if(!defined('INDEX')) die();
+if(!defined('INDEX')) die();
 ?>
 
 
@@ -307,14 +307,12 @@
 </head>
 <body>
     <div class="sidebar">
-        <ul>
             <h1>Data Absen</h1>
-            <li><i class="fas fa-home"></i> Menu Absen</li>
-            <li><i class="fas fa-user"></i> Data Absen</li>
-            <li><i class="fas fa-chart-bar"></i> Data Rekap</li>
-            <li><i class="fas fa-cog"></i> Pengaturan</li>
-            <li><a href="dashboard.php?logout=true" style="color:white; text-decoration:none;"></a><i class="fas fa-sign-out-alt"></i> Keluar</a></li>
-        </ul>
+            <a href="?hal=dashboard">Menu Absen</a>
+            <a href="?hal=data-absen">Data Absen</a>
+            <a href="?hal=data-rekap">Data Rekap</a>
+            <a href="?hal=pengaturan">Pengaturan</a>
+            <a href="logout.php">Keluar</a></ul>
     </div>
 
     <div class="main">
@@ -335,6 +333,10 @@
             <span>Putri</span>
         </div>
     </div>
+
+    <section class="main">
+        <?php include "konten.php" ?>
+    </section>
 
     <div class="footer">
         &copy; 2025 Copyright | Kelompok 1

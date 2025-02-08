@@ -1,8 +1,8 @@
 <?php
-// session_start();
-// include "library/config.php";
+session_start();
+include "library/config.php";
 
-// if(!defined('INDEX')) die();
+if(!defined('INDEX')) die();
 
 ?>
 <!-- <h1>APPASI</h1>

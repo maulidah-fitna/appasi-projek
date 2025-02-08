@@ -190,6 +190,10 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
             line-height: 1.5;
         }
 
+        .info-card a:hover {
+            color: #78909C;
+        }
+
         /* Footer */
         .footer {
             position: absolute;
@@ -198,6 +202,7 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
             font-size: 14px;
             color: rgba(0, 0, 0, 0.6);
         }
+
     </style>
 </head>
 <body>
@@ -207,7 +212,7 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
             <h3>Menu Utama</h3>
             <a href="?hal=dashboard">Menu Absen</a>
             <a href="?hal=data-absen">Data Absen</a>
-            <a href="?hal=rekap">Data Rekap</a>
+            <a href="?hal=data-rekap">Data Rekap</a>
             <a href="?hal=pengaturan">Pengaturan</a>
             <a href="logout.php">Keluar</a>
         </div>
@@ -219,7 +224,7 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
                 <!-- Kartu Panduan -->
                 <div class="info-card">
                     <h3>Panduan Penggunaan Aplikasi</h3>
-                    <p>Klik di sini</p>
+                    <a href="?hal=panduan">Klik di sini</a >
                 </div>
                 <!-- Kartu Informasi -->
                 <div class="info-card">
