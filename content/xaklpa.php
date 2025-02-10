@@ -94,14 +94,14 @@ include "../library/config.php"
         }
         .table-container {
             display: flex;
-            gap: 20px;
+            /* gap: 20px; */
         }
         .table {
             flex: 1;
             background: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            /* border-radius: 10px; */
+            /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
         }
         .table-header {
             background: #6A0572;
@@ -116,29 +116,55 @@ include "../library/config.php"
             border-collapse: collapse;
             margin-top: 10px;
         }
-        th, td {
+        td {
             border: 1px solid #ddd;
             padding: 10px;
-            text-align: center;
+            text-align: left;
         }
         th {
             background: #43A047;
             color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
         }
         td input[type="checkbox"] {
             width: 18px;
             height: 18px;
         }
+
+        td input[type="radio"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        .button {
+            margin-top: 20px;
+            background: white;
+            color: black;
+            border: none;
+            padding: 8px 16px; /* Memperkecil tombol */
+            font-size: 14px; /* Memperkecil ukuran font */
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #f0f0f0;
+        }
+
+        
     </style>
 </head>
 <body>
     <nav class="sidebar">
         <h2>menu absen</h2>
-        <a href="#"><i class="fas fa-home"></i> Menu Absen</a>
-        <a href="#"><i class="fas fa-user"></i> Data Absen</a>
-        <a href="#"><i class="fas fa-chart-bar"></i> Data Rekap</a>
-        <a href="#"><i class="fas fa-cog"></i> Pengaturan</a>
-        <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+        <a href="?hal=dashboard"><i class="fas fa-home"></i> Menu Absen</a>
+        <a href="?hal=data-absen"><i class="fas fa-user"></i> Data Absen</a>
+        <a href="?hal=data-rekap"><i class="fas fa-chart-bar"></i> Data Rekap</a>
+        <a href="?hal=pengaturan"><i class="fas fa-cog"></i> Pengaturan</a>
+        <a href="../logout.php"><i class="fas fa-sign-out-alt"></i> Keluar</a>
     </nav>
     
     <div class="main-content">
@@ -158,20 +184,29 @@ include "../library/config.php"
         <div class="dashboard">
             <div class="table-container">
                 <div class="table">
-                    <div class="table-header">Kehadiran</div>
+                    <div class="table-header">Kehadiran dan Kelengkapan</div>
                     <table>
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
                                 <th>Hadir</th>
-                                <th>Tanpa Ket</th>
+                                <th>Alpa</th>
                                 <th>Izin</th>
+                                
+                                <th>Kaos Kaki</th>
+                                <th>Sabuk</th>
+                                <th>Seragam</th>
+                                <th>Songkok</th>
+                                <th>Sepatu</th>
+                                <th>Hasduk</th>
+                            
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="tbody">
+
                         <?php
-                        $query = "SELECT * FROM siswa_putra WHERE jurusan='LPS'";
+                        $query = "SELECT * FROM siswa_putra WHERE jurusan='AKL'";
                         // $query .= "LEFT JOIN data-absen ";
                         // $query .= "ON pegawai.id_jabatan = jabatan.id_jabatan ";
                         // $query .= "ORDER BY pegawai.id_jabatan DESC";
@@ -183,39 +218,39 @@ include "../library/config.php"
                         ?>
 
                             <tr>
-                                <td><?$no;?></td>
+                                <td><?=$no?></td>
                                 <td><?=$data['nama_siswa']?></td>
-                                <td><input type="checkbox"></td>
-                                <td><input type="checkbox"></td>
-                                <td><input type="checkbox"></td><br>
-                            </tr><br>
+                                <td><input type="radio"></td>
+                                <td><input type="radio"></td>
+                                <td><input type="radio"></td>
+                                
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+<?php
+    }
+?>
                         </tbody>
                     </table>
                 </div>
-                <div class="table">
+                <!-- <div class="table">
                     <div class="table-header">Kelengkapan Atribut</div>
                     <table>
                         <thead>
-                            <tr>
-                                <th>Kaos Kaki</th>
-                                <th>Sabuk</th>
-                                <th>Seragam</th>
-                                <th>Songkok</th>
-                                <th>Sepatu</th>
-                                <th>Hasduk</th>
-                            </tr>
+
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="checkbox" checked></td>
-                                <td><input type="checkbox" checked></td>
-                                <td><input type="checkbox" checked></td>
-                                <td><input type="checkbox" checked></td>
-                                <td><input type="checkbox" checked></td>
-                                <td><input type="checkbox" checked></td>
-                            </tr><br>
+
+                            </tr>
+                            
                         </tbody>
-                    </table>
+                    </table> -->
+
                 </div>
             </div>
         </div>
@@ -228,9 +263,11 @@ include "../library/config.php"
         }
     </script>
 
-<?php
-                        }
-?>
+<section class="main">
+        <?php include "../konten.php" ?>
+    </section>
+
+
 </body>
 </html>
 

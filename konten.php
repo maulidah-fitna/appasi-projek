@@ -6,7 +6,13 @@
         "data-absen",
         "tambah-siswa",
         "xaklpa",
-        "xaklpi"
+        "xaklpi",
+        "xpplgpa",
+        "xpplgpi",
+        "xirplpa",
+        "xirplpi",
+        "xilpspa",
+        "xilpspi"
     ];
 
     if (isset($_GET['hal'])) {

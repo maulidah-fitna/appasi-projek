@@ -203,39 +203,47 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
             color: rgba(0, 0, 0, 0.6);
         }
 
+        .menu{
+	padding: 0;
+}
+
+/* Menambah border bawah tag <li> */
+.menu li{
+	border-bottom: 1px dotted #444;
+}
+
+/* Mengatur desain menu yang dibuat dengan tag a */
+.menu a{
+	display: block;
+	padding: 20px 20px;
+	list-style: none;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Mengganti background menu ketika ditunjuk mouse */
+.menu a:hover{
+	background: #000;
+}
+
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar">
-            <h3>Menu Utama</h3>
-            <a href="?hal=dashboard">Menu Absen</a>
-            <a href="?hal=data-absen">Data Absen</a>
-            <a href="?hal=data-rekap">Data Rekap</a>
-            <a href="?hal=pengaturan">Pengaturan</a>
-            <a href="logout.php">Keluar</a>
-        </div>
+        <nav class="sidebar">
+        <h2>Data Absen</h2>
+        <aside>
+            <ul class="menu">
+                <a href="menuutama.html"><i class="fas fa-home"></i> Menu Utama</a>
+                <a href="dataabsen.html"><i class="fas fa-user"></i> Data Absen</a>
+                <a href="rekababsen.html"><i class="fas fa-chart-bar"></i> Data Rekap</a>
+                <a href="pengaturan.html"><i class="fas fa-cog"></i> Pengaturan</a>
+                <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+            </ul> 
+        </aside>           
 
-        <!-- Konten Utama -->
-        <div class="main-content">
-            <h1>Menu Utama</h1>
-            <div class="info-box">
-                <!-- Kartu Panduan -->
-                <div class="info-card">
-                    <h3>Panduan Penggunaan Aplikasi</h3>
-                    <a href="?hal=panduan">Klik di sini</a >
-                </div>
-                <!-- Kartu Informasi -->
-                <div class="info-card">
-                    <h3>Aplikasi ini dibuat untuk mempermudah</h3>
-                    <p>
-                        "Aplikasi ini dibuat untuk mempermudah guru dan OSIS untuk
-                        mengabsen, merekap, menyimpan data dari absen dan rekap
-                        dengan aman dan efisien."
-                    </p>
-                </div>
-            </div>
+        
             
             <section class="main">
                 <?php include "konten.php" ?>
