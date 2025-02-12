@@ -4,6 +4,7 @@
     $halaman = [
         "dashboard",
         "data-absen",
+        "data-rekap",
         "tambah-siswa",
         "xaklpa",
         "xaklpi",

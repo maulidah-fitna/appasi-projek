@@ -90,6 +90,7 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Utama</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         /* Reset dan Styling Dasar */
         * {
@@ -126,6 +127,7 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
             display: flex;
             flex-direction: column;
             padding: 20px;
+            height: 100%;
         }
 
         .sidebar h3 {
@@ -135,10 +137,10 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
             font-size: 18px;
         }
 
-        .sidebar a {
+        .sidebar li {
             text-decoration: none;
             color: #FFFFFF;
-            padding: 10px 15px;
+            /* padding: 10px 15px; */
             margin-bottom: 10px;
             background-color: #546E7A; /* Abu-abu hijau */
             border-radius: 5px;
@@ -224,27 +226,42 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
 /* Mengganti background menu ketika ditunjuk mouse */
 .menu a:hover{
 	background: #000;
+
+
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
     </style>
+
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <nav class="sidebar">
-        <h2>Data Absen</h2>
-        <aside>
-            <ul class="menu">
-                <a href="menuutama.html"><i class="fas fa-home"></i> Menu Utama</a>
-                <a href="dataabsen.html"><i class="fas fa-user"></i> Data Absen</a>
-                <a href="rekababsen.html"><i class="fas fa-chart-bar"></i> Data Rekap</a>
-                <a href="pengaturan.html"><i class="fas fa-cog"></i> Pengaturan</a>
-                <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
-            </ul> 
-        </aside>           
-
         
-            
+        <nav>
+            <ul class="menu">
+                <li><a href="?hal=dashboard"><i class="fas fa-home"></i> Menu Utama</a></li>
+                <li><a href="?hal=data-absen"><i class="fas fa-user"></i> Data Absen</a></li>
+                <li><a href="?hal=data-rekap"><i class="fas fa-chart-bar"></i> Data Rekap</a></li>
+                <li><a href="?hal=pengaturan"><i class="fas fa-cog"></i> Pengaturan</a></li>
+                <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Keluar</a></li>
+            </ul> 
+        </nav>           
+
             <section class="main">
                 <?php include "konten.php" ?>
             </section>

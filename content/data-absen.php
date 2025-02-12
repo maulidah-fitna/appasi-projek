@@ -1,3 +1,7 @@
+<?php
+if(!defined('INDEX')) die("");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,47 +22,6 @@
             background: linear-gradient(135deg, #6A0572, #21867a);
             color: #fff;
             display: flex;
-        }
-        
-        .sidebar {
-            width: 250px;
-            background: #2c3e50;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            position: fixed;
-            left: 0;
-            top: 0;
-            height: 100vh;
-        }
-        
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            background: #34495e;
-            border-radius: 5px;
-        }
-        
-        .sidebar a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            padding: 15px;
-            margin: 5px 0;
-            background: #34495e;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        
-        .sidebar a i {
-            margin-right: 10px;
-        }
-        
-        .sidebar a:hover {
-            background:#43A047;
         }
         
         .main {
