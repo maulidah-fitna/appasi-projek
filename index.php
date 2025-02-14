@@ -262,9 +262,11 @@ if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
             </ul> 
         </nav>           
 
-            <section class="main">
+
+<section class="main">
                 <?php include "konten.php" ?>
             </section>
+
             
             <!-- Footer -->
             <div class="footer">
